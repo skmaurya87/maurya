@@ -1,0 +1,25 @@
+<div class="row m-0">
+    <div class="col-md-3"  *ngFor="let image of myCarouselImages;let i = index">
+        <a href="{{image}}" data-lightbox="image" data-title="My caption">
+            <img class="img-fluid mb-4"  src={{image}}>
+        </a>
+    </div>
+</div>
+<h6><span class="badge badge-primary">1</span> First Install Lightbox2 in using CMD</h6>
+<pre class="bg-secondary text-white p-2 text-monospace">npm install --save lightbox2</pre>
+<p>Next, open <span class="text-danger text-monospace">angular.json</span> file and add lightbox.min.css file path to the styles section. Like,</p>
+
+<pre class="bg-secondary text-white p-2 text-monospace">
+    "styles": [
+    "styles.css",
+    "node_modules/lightbox2/dist/css/lightbox.min.css"
+],
+</pre>
+<p>Next, open <span class="text-danger text-monospace">angular.json</span> add js file</p>
+
+<pre class="bg-secondary text-white p-2 text-monospace">
+    "scripts": [
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/lightbox2/dist/js/lightbox.min.js"
+  ],
+</pre>

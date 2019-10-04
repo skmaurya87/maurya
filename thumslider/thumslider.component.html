@@ -1,0 +1,130 @@
+<div class="row m-0">
+<div class="col-md-12"><ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery></div>
+<!-- <div class="col-md-6"><ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery></div> -->
+</div>
+
+<div class="col-sm-12">
+<a href="https://lukasz-galka.github.io/ngx-gallery-demo/" target="_blank" class="btn btn-primary my-5">Go for Live Example</a>
+
+<h6><span class="text-danger text-monospace">Hammerjs</span> (required for swipe)</h6>
+<pre class="bg-secondary text-white p-2 text-monospace">npm install hammerjs --save</pre>
+<h6>Inport HammerJs in <span class="text-danger text-monospace">app.module</span></h6>
+
+<pre class="bg-secondary text-white p-2 text-monospace">import 'hammerjs';</pre>
+
+<h6>Install ngx-gallery</h6>
+<pre class="bg-secondary text-white p-2 text-monospace">npm install ngx-gallery --save</pre>
+<h6><span class="text-danger text-monospace">app.module.ts</span> file</h6>
+<textarea _ngcontent-c12="" autocapitalize="off" autocomplete="off" autocorrect="off" class="w-100 bg-light text-monospace" spellcheck="false" style="min-height:35vh; font-size: 12px;"> 
+  // app.module.ts
+  import { NgxGalleryModule } from 'ngx-gallery';
+  ...
+  @NgModule({
+      imports: [
+          ...
+          NgxGalleryModule
+          ...
+      ],
+      ...
+  })
+  export class AppModule { }</textarea>
+  <div class="clearfix"></div>
+<textarea _ngcontent-c12="" autocapitalize="off" autocomplete="off" autocorrect="off" class="w-100 bg-light text-monospace" spellcheck="false" style="min-height:15vh; font-size: 12px;"> 
+  // app.component.html
+  <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+</textarea>
+  <div class="clearfix"></div>
+<textarea _ngcontent-c12="" autocapitalize="off" autocomplete="off" autocorrect="off" class="w-100 bg-light text-monospace" spellcheck="false" style="min-height:100vh; font-size: 12px;"> 
+  import { Component, OnInit } from '@angular/core';
+import { NgxGalleryOptions, NgxGalleryImage, NgxGalleryAnimation } from 'ngx-gallery';
+
+@Component({
+  selector: 'app-thumslider',
+  templateUrl: './thumslider.component.html',
+  styleUrls: ['./thumslider.component.css']
+})
+export class ThumsliderComponent implements OnInit {
+  galleryOptions: NgxGalleryOptions[];
+  galleryImages: NgxGalleryImage[];
+  // constructor() { }
+
+  ngOnInit(): void {
+ 
+    this.galleryOptions = [
+        {
+            width: '100%',
+            height: '400px',
+            thumbnailsColumns: 5,
+            imageAnimation: NgxGalleryAnimation.Slide,
+            imageAutoPlay: true,
+            imageAutoPlayPauseOnHover: true,
+            previewAutoPlay: true,
+            previewAutoPlayPauseOnHover: true,
+        },
+        // max-width 800
+        {
+            breakpoint: 800,
+            width: '100%',
+            height: '600px',
+            imagePercent: 80,
+            thumbnailsPercent: 20,
+            thumbnailsMargin: 20,
+            thumbnailMargin: 20
+        },
+        // max-width 400
+        {
+            breakpoint: 400,
+            preview: false
+        },
+    ];
+
+    this.galleryImages = [
+        {
+            small: 'assets/images/1-small.jpeg',
+            medium: 'assets/images/1-medium.jpeg',
+            big: 'assets/images/1-big.jpeg'
+        },
+        {
+            small: 'assets/images/2-small.jpeg',
+            medium: 'assets/images/2-medium.jpeg',
+            big: 'assets/images/2-big.jpeg'
+        },
+        {
+            small: 'assets/images/3-small.jpeg',
+            medium: 'assets/images/3-medium.jpeg',
+            big: 'assets/images/3-big.jpeg'
+        },
+        {
+            small: 'assets/images/4-small.jpeg',
+            medium: 'assets/images/4-medium.jpeg',
+            big: 'assets/images/4-big.jpeg'
+        },
+        {
+            small: 'assets/images/5-small.jpeg',
+            medium: 'assets/images/5-medium.jpeg',
+            big: 'assets/images/5-big.jpeg'
+        },
+        {
+            small: 'assets/images/6-small.jpeg',
+            medium: 'assets/images/6-medium.jpeg',
+            big: 'assets/images/6-big.jpeg'
+        },
+        {
+            small: 'assets/images/7-small.jpeg',
+            medium: 'assets/images/7-medium.jpeg',
+            big: 'assets/images/7-big.jpeg'
+        },
+        {
+            small: 'assets/images/8-small.jpeg',
+            medium: 'assets/images/8-medium.jpeg',
+            big: 'assets/images/8-big.jpeg'
+        }
+    ];
+}
+}
+
+</textarea>
+
+</div>
+
+

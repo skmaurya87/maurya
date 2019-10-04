@@ -1,0 +1,29 @@
+<div class="product-slider">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item" id="myDIV" *ngFor="let d of images | fixes:5">
+        <img class="d-block w-100 img-fit" src="{{d.img}}" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <div class="container text-left">
+              <h3 class="text-left"><small class="badge badge-light p-2 mb-2">{{d.badge}}</small>{{d.h3}}</h3>
+              <p class="text-white text-left">{{d.text}}</p>
+              <a href="{{d.btn}}" target="_blank" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <ol class="thumb-indicators carousel-indicators">
+        <li data-target="#carouselExampleCaptions"  *ngFor="let d of images  | fixes:5 let i = index" [attr.data-slide-to]="i">
+          <img src="{{d.img}}" alt="">
+        </li>
+      </ol>
+  </div>
+</div>

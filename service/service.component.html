@@ -1,0 +1,26 @@
+<table class="table table-sm table-bordered" style="font-size:13px;">
+    <thead>
+    <tr>
+            <th>SN</th>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>phone</th>
+            <th>website</th>
+            <th>company</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let d of letNews">
+        <td>{{d.id}}</td>
+        <td>{{d.name}}</td>
+        <td>{{d.username}}</td>
+        <td>{{d.email}}</td>
+        <td>{{d.address.street}} {{d.address.suite}} {{d.address.city}}</td>
+        <td>{{d.phone}}</td>
+        <td>{{d.website}}</td>
+        <td>{{d.company.name}}</td>
+    </tr>
+</tbody>
+</table>

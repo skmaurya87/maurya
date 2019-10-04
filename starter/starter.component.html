@@ -1,0 +1,32 @@
+<h5 class="text-primary mb-3">Start Bootstrap project in angular 7</h5>
+  <h6><span class="badge badge-primary">1</span> First Install Bootstrap in using CMD</h6>
+  <pre class="bg-secondary text-white p-2 text-monospace">npm install bootstrap --save</pre>
+  <p>Next, open <span class="text-danger text-monospace">angular.json</span> file and add bootstrap file path to the styles section. Like,</p>
+  <pre class="bg-secondary text-white p-2 text-monospace">"styles": [
+      "node_modules/bootstrap/dist/css/bootstrap.min.css",
+      "src/styles.css"
+    ],</pre>
+<p>Refrance bootstrap.min.css <span class="text-danger text-monospace">angular.json</span>  then run <span class="text-danger text-monospace">ng-build</span> command</p>
+<div class="line"></div>
+<h6 class="mb-3"><span class="badge badge-primary">2</span> Install Font awessome in our project if you need</h6>
+<pre class="bg-secondary text-white p-2 text-monospace">npm install --save font-awesome angular-font-awesome</pre>
+<pre class="bg-secondary text-white p-2 text-monospace">"styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "node_modules/font-awesome/css/font-awesome.min.css",
+    "src/styles.css"
+  ],</pre>
+  <p>Refrance font-awesome.min.css <span class="text-danger text-monospace">angular.json</span>  then run <span class="text-danger text-monospace">ng-build</span> command</p>
+<div class="line"></div>
+<h6 class="mb-3"><span class="badge badge-primary">3</span> Install jquery in our project if you need</h6>
+<pre class="bg-secondary text-white p-2 text-monospace">npm install jquery --save</pre>
+<pre class="bg-secondary text-white p-2 text-monospace">"scripts": [
+    "node_modules/jquery/dist/jquery.js",
+  ]</pre>
+  <p>Refrance jquery.min.js file in in <span class="text-danger text-monospace">angular.json</span>  then run <span class="text-danger text-monospace">ng-build</span> command</p>
+  <p><strong>Note: </strong> you can add multiple jquery file in sequence here example.. </p>
+  <pre class="bg-secondary text-white p-2 text-monospace">"scripts": [
+      "node_modules/jquery/dist/jquery.js",
+      "node_modules/jquery/dist/bootstrap.min.js",
+    ]</pre>
+    <p>You will be declare jquery in your module.ts file look like this</p>
+    <img src="assets/images/jquery-code-in-angular-project.jpg" alt="" class="img-fluid">
